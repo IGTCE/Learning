@@ -1,0 +1,17 @@
+name: Hello World
+
+# Runs on every push and pull request, so you can watch it fire
+# when you practice the branch -> PR -> merge workflow.
+on:
+  push:
+  pull_request:
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Say hello
+        run: echo "Hello from GitHub Actions! This workflow ran successfully."
